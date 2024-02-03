@@ -1,4 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhi7wvmiyv7kw"]
+[gd_scene load_steps=10 format=3 uid="uid://dhi7wvmiyv7kw"]
+
+[ext_resource type="PackedScene" uid="uid://b0q0bnia378s4" path="res://Scenes/Player.tscn" id="1_6g8re"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sralc"]
 render_priority = -1
@@ -31,7 +33,6 @@ radial_segments = 30
 albedo_color = Color(0.627451, 0.541176, 0.752941, 1)
 
 [node name="Level 1" type="Node3D"]
-metadata/_edit_lock_ = true
 
 [node name="Ground" type="StaticBody3D" parent="."]
 metadata/_edit_lock_ = true
@@ -46,7 +47,6 @@ shape = SubResource("BoxShape3D_ux5l0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.39612, 0)
 
 [node name="Trunk" type="StaticBody3D" parent="Tree"]
-metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Tree/Trunk"]
 mesh = SubResource("CylinderMesh_fe5cw")
@@ -59,7 +59,6 @@ shape = SubResource("CylinderShape3D_oipch")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428311, 1.87035, -0.905998)
 mesh = SubResource("SphereMesh_qaxum")
 surface_material_override/0 = SubResource("StandardMaterial3D_q3x36")
-metadata/_edit_lock_ = true
 
 [node name="Tree2" type="Node3D" parent="."]
 transform = Transform3D(0.999977, 0, 0.00675437, 0, 1, 0, -0.00675437, 0, 0.999977, 2.68313, 3.16689, 1.49528)
@@ -136,3 +135,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428311, 1.87035, -0.905998
 mesh = SubResource("SphereMesh_qaxum")
 surface_material_override/0 = SubResource("StandardMaterial3D_q3x36")
 metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("1_6g8re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.40637, 1.61877, 0.0785804)
+
+[node name="Player2" parent="." instance=ExtResource("1_6g8re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54476, 1.55053, 0.16885)
+
+[node name="Player3" parent="." instance=ExtResource("1_6g8re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56042, 1.21191, 0.0979056)
